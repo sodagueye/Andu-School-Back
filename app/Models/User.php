@@ -23,6 +23,13 @@ class User extends Authenticatable
         'password',
     ];
 
+    // "nom",
+    //   "prenom",
+    //    "email",
+    //    'telephone',
+    //    " adress",
+    //    "INE"
+
     /**
      * The attributes that should be hidden for serialization.
      *

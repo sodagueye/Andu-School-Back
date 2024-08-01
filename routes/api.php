@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EleveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('ajouter', [EleveController::class, 'ajouterEleve']);
+Route::put('modifier/{id}', [EleveController::class, 'modifier']);
+
+Route::delete('supprimer-eleve/{id}', [EleveController::class, 'supprimer']);
+Route::get('listerEleve', [EleveController::class, 'lister']);
