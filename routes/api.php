@@ -18,8 +18,17 @@ use App\Http\Controllers\EleveController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+// route pour ajout
 Route::post('ajouter', [EleveController::class, 'ajouterEleve']);
+
+// route pour modifier
 Route::put('modifier/{id}', [EleveController::class, 'modifier']);
 
+// route pour supprimer
 Route::delete('supprimer-eleve/{id}', [EleveController::class, 'supprimer']);
-Route::get('listerEleve', [EleveController::class, 'lister']);
+
+// route pour lister tous les eleves
+Route::get('listerAndu', [EleveController::class, 'lister']);
+
+// route pour liste un seul eleve
+Route::get('listerAndu/{id}', [EleveController::class, 'listerId']);
